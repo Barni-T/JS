@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Gyakorlás</title>
+    <style>
+        h1{
+            text-align: center;
+            font-style: italic;
+        }
+        #meg, #meg_2{
+            width: 30vw;
+            height: 30vh;
+            display: block;
+            margin-inline: auto;
+            background-color: red;
+            border: 3px black solid;
+            line-height: 30vh;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        #meg_alatt{
+            text-indent: 10px;
+            font-weight: bold;
+            display: none;
+            margin-inline: auto;
+            width: 30vw;
+            transition: 0.5s;
+        }
+        label{
+            margin-right: 10px;
+        }
+        input{
+            margin-right: 10px;
+        }
+        @media(max-width : 600px){
+            #meg, #meg_2{
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Gyakorlás</h1>
+    <p style="display: block; margin-inline: auto;">Üdvözlöm, <b><i id="szolitas"></i></b>!</p>
+    <button id="meg" onclick="nyom()">Nyomj meg!</button>
+    <p id="meg_alatt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia accusamus sint unde ducimus! Ipsa architecto, atque aspernatur culpa tenetur officiis. Autem, sint ex nostrum quidem nulla cum molestiae eligendi delectus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam accusantium nam natus at, tenetur maiores id animi vero dolorum eligendi reprehenderit velit, ipsa quae voluptates possimus quia a blanditiis quod.</p>
+    <br><label style="font-style: italic; font-weight: bold;">Adja meg a jelszavát!</label><input type="password" id="jelszo"><button id="mehet" onclick="mehet()">Jelszó mentése</button>
+    <button id="meg_2" onmouseover="rajta()" onmouseleave="nincs_rajta()" onclick="vicc()">Vidd át rajtam!</button>
+    <br><label>Meg szeretné tekinteni a fiókján lévő összeget?</label>
+    <input type="radio" name="egy" id="elso" onclick="igen()">Igen <input type="radio" name="egy" id="masodik" onclick="nem()"> Nem
+    <div>
+        <p style="font-weight: bold; font-size: 1.5rem; display: none;" id="kar">Kár :(</p>
+        <label id="lab" style="font-style: italic; font-weight: bold; display: none;">Adja meg újra a jelszavát!</label><input type="password" id="in" style="display: none;"><button onclick="ellen()" style="display: none;" id="ellenor">Ellenőrzés</button>
+        <p id="osszeg" style="display: none;">1,000,000,000$</p>
+        <p id="nem_jo" style="display: none;">Nem jó a jelszó!</p>
+    </div>
+    <script src="js_gyak.js"></script>
+</body>
+</html>
